@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build -t dmi-tcat . 2>&1
+docker build -t theneva/dmi-tcat . 2>&1

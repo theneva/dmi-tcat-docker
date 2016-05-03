@@ -10,6 +10,17 @@ This repository is a hackish attempt at containing [dmi-tcat](https://github.com
 
 ## Required environment variables
 
+Things that change from instance to instance are configured with environment variables. Set them with Docker like this:
+
+```bash
+docker run \
+  -e tcat_base_url="http://tcat.myserver.com/" \
+  -e twitter_track_consumer_key="..." \
+  -e another_var="something_else" \
+  -p <host port>:80 \
+  theneva/dmi-tcat:latest
+```
+
 - __tcat_base_url__: The base URL for the application __with trailing slash__ (e.g., http://example.com/, http://tcat.example.com//).
 - For `track` role:
     - __twitter_track_consumer_key__: Your [Twitter app's](https://apps.twitter.com) "Consumer Key (API Key)".
